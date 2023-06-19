@@ -44,11 +44,11 @@ class User(BaseModel):
             raise ValueError('Invalid Email value')
         return v
 
-
+import time 
 @api.post('/user')
 def get_user(user: User):
-    print(user)
-    return []
+    time.sleep(1)
+    return ['here is a user']
 
 
 app.include_router(api)
