@@ -1,8 +1,7 @@
 # Fastapi + Elm + Tailwindcss tech stack 
 
 1. Setup elm app 
-    * `git submodule init`
-    * `git submodule update`
+    * `git submodule update --init`
 2. Remove `.git` for the project
     * `rm -rf .git`
     * `rm .gitmodules`
