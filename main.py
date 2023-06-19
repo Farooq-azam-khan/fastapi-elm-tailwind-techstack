@@ -55,8 +55,9 @@ app.include_router(api)
 
 
 @app.get('/')
-def home():
-    return {'Hello': 'World'}
+def home(request: Request):
+    return templates.TemplateResponse('index.html',
+                                        {'request': request} )
 
 
 if __name__ == '__main__':
