@@ -2,7 +2,7 @@
 
 1. Setup elm 
     * clone the elm-vite-setup repo in the ui directory 
-    * `git clone git@github.com:Farooq-azam-khan/elm-vite-setup.git ui`
+    * `git clone git@github.com:Farooq-azam-khan/elm-vite-setup.git app`
 2. Install npm packages
     * `cd ui`
     * `pnpm install` 
