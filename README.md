@@ -16,6 +16,7 @@ cd ..
     * `poetry install` in the root folder 
 3. Run the fastapi server 
     * `poetry run uvicorn main:app --reload`
+    * visit: `localhost:8000/docs`
 4. Install npm packages
     * `cd app`
     * `npm install` 
