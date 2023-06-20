@@ -20,5 +20,6 @@ cd ..
 4. Install npm packages
     * `cd app`
     * `npm install` 
-    * `npm start` - to start the local development server 
+    * `npm start` - to start the local development server
+    * visit: `http://localhost:5173`
 
