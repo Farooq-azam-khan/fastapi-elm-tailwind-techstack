@@ -7,7 +7,7 @@ mkdir work-dir
 cd work-dir
 npx degit https://github.com/Farooq-azam-khan/fastapi-elm-tailwind-techstack 
 cd app 
-npx degit [https://github.com/Farooq-azam-khan/elm-vite-setup/tree/main](https://github.com/Farooq-azam-khan/elm-vite-setup)
+npx degit https://github.com/Farooq-azam-khan/elm-vite-setup
 ```
 1. Install poetry 
     * ubuntu/debian based systems: `sudo apt install python3-poetry` 
