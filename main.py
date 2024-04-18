@@ -1,11 +1,10 @@
-from fastapi import FastAPI
-
 from dotenv import load_dotenv
-from fastapi import FastAPI, APIRouter, Request
-from fastapi.templating import Jinja2Templates
-from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel,  validator
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+
+from api import api_router
 
 load_dotenv()
 
@@ -25,39 +24,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.mount('/assets', StaticFiles(directory='./assets'), name='asset_files')
-templates = Jinja2Templates(directory='templates')
+app.mount("/assets", StaticFiles(directory="./assets"), name="asset_files")
+templates = Jinja2Templates(directory="templates")
 
-api = APIRouter(
-    prefix='/api', tags=['api'], responses={404: {'description': 'api route not found...'}})
-
-
-class User(BaseModel):
-    email: str
-    username: str
-
-    @validator('email')
-    def validate_email(cls, v):
-        if len(v) <= 0:
-            raise ValueError('Email is a required field')
-        elif '@' not in v or '.' not in v:
-            raise ValueError('Invalid Email value')
-        return v
-
-import time 
-@api.post('/user')
-def get_user(user: User):
-    time.sleep(1)
-    return ['here is a user']
+app.include_router(api_router)
 
 
-app.include_router(api)
-
-
-app.get('/')
+@app.get("/")
 def home(request: Request):
-    return templates.TemplateResponse('index.html',
-                                        {'request': request} )
+    return templates.TemplateResponse("index.html", {"request": request})
 
 
 if __name__ == "__main__":
