@@ -206,6 +206,14 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
+name = "ruff"
+version = "0.3.7"
+description = "An extremely fast Python linter and code formatter, written in Rust."
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "sniffio"
 version = "1.3.0"
 description = "Sniff out which async library your code is running under"
@@ -300,7 +308,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "ca0dd29de043e478fcb0b733dfd5adb01cb4bcf2109a29ed6690faf7e165ccd6"
+content-hash = "e53ecc364918b4ce5ee21597fb746068637cba81eb379e72893dcac94bef5ff9"
 
 [metadata.files]
 anyio = []
@@ -321,6 +329,7 @@ pydantic = []
 pytest = []
 python-dotenv = []
 pyyaml = []
+ruff = []
 sniffio = []
 starlette = []
 typing-extensions = []
