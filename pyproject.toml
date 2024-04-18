@@ -8,6 +8,8 @@ authors = ["farooq-azam-khan <khanazamfarooq99@gmail.com>"]
 python = "^3.10"
 fastapi = "^0.95.2"
 uvicorn = {extras = ["standard"], version = "^0.22.0"}
+python-dotenv = "^1.0.0"
+Jinja2 = "^3.1.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
