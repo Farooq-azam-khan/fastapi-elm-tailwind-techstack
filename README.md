@@ -45,3 +45,4 @@ cd ..
    * [ ] rate limiting : upstash, custom dev 
 * [ ] add `termcolor` to list of python packages
 * [ ] design considerations for a `cli` tool for easy setup
+   * [ ] a watch script that looks at the `api.py` file and generate elm functions that make http requests based on the types
