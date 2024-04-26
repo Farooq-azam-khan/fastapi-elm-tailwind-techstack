@@ -32,10 +32,16 @@ cd ..
 
 
 ## TODO
+* [ ] consider the following features and the products available for them 
+   * [ ] auth: clerk, auth0
+   * [ ] error tracking for python: sentry
+   * [ ] payment processing: stripe, square
+   * [ ] web analytics: posthog
+   * [ ] a/b testing: posthog
+   * [ ] key value storage : redis, upstash
+   * [ ] relational db : postgres, aws, azure, gcp 
+   * [ ] static asset storage : aws s3, azure storage account
+   * [ ] vector db : upstash
+   * [ ] rate limiting : upstash, custom dev 
 * [ ] add `termcolor` to list of python packages
-* [ ] look into auth with clerk
-* [ ] look into error tracking with sentry
-* [ ] looking into stripe testing
-* [ ] look into posthog for web analytics + a/b testing
-* [ ] look into vector db + key value db with upstash
 * [ ] design considerations for a `cli` tool for easy setup
