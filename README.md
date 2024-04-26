@@ -1,7 +1,14 @@
-# Fastapi + Elm + Tailwindcss tech stack 
+# Tech Stack
 
+## Technologies 
+* FastAPI
+* Elm
+* Tailwindcss
+* Typescript
+
+## Setup 
 0. setup this repo + elm app repo 
-```Bash 
+```bash 
 npm i -g degit
 mkdir work-dir
 cd work-dir
@@ -23,3 +30,12 @@ cd ..
     * `npm start` - to start the local development server
     * visit: `http://localhost:5173`
 
+
+## TODO
+* [ ] add `termcolor` to list of python packages
+* [ ] look into auth with clerk
+* [ ] look into error tracking with sentry
+* [ ] looking into stripe testing
+* [ ] look into posthog for web analytics + a/b testing
+* [ ] look into vector db + key value db with upstash
+* [ ] design considerations for a `cli` tool for easy setup
