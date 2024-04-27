@@ -260,6 +260,17 @@ anyio = ">=3.4.0,<5"
 full = ["httpx (>=0.22.0)", "itsdangerous", "jinja2", "python-multipart", "pyyaml"]
 
 [[package]]
+name = "termcolor"
+version = "2.4.0"
+description = "ANSI color formatting for output in terminal"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+tests = ["pytest", "pytest-cov"]
+
+[[package]]
 name = "typing-extensions"
 version = "4.11.0"
 description = "Backported and Experimental Type Hints for Python 3.8+"
@@ -331,7 +342,7 @@ python-versions = ">=3.8"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "e489eff88874b4d7526282534e82aa359e3684cfd65cb0a61a3e528cb48d40de"
+content-hash = "bb61ef4e4681a04f847a2b42a3ec8403647f7feec4edc5ac4467cd2264e18eae"
 
 [metadata.files]
 anyio = []
@@ -357,6 +368,7 @@ pyyaml = []
 ruff = []
 sniffio = []
 starlette = []
+termcolor = []
 typing-extensions = []
 uvicorn = []
 uvloop = []
