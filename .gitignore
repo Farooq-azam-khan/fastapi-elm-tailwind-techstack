@@ -2,3 +2,6 @@
 __pycache__
 elm-stuff
 node_modules
+.mypy_cache
+# TODO: add `assets/*.{css,js}`
+assets/**/*.{js,css}
