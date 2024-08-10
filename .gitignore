@@ -5,3 +5,4 @@ node_modules
 .mypy_cache
 # TODO: add `assets/*.{css,js}`
 assets/**/*.{js,css}
+templates/index.html
