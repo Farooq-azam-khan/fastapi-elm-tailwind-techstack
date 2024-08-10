@@ -19,7 +19,7 @@ test:
 	pnpm --prefix app test
 
 test-coverage: 
-	pytest --cov=.
+	pytest --cov
 	pnpm --prefix app test:coverage
 
 backend: 
