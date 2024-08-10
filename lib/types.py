@@ -12,6 +12,3 @@ class User(BaseModel):
         elif "@" not in v or "." not in v:
             raise ValueError("Invalid Email value")
         return v
-
-
-
