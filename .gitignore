@@ -16,3 +16,8 @@ templates/index.html
 node_modules
 elm-stuff
 dist
+/coverage
+
+
+# misc
+.DS_Store
