@@ -1,8 +1,18 @@
+# server ignores
 .env
+
+# python ignores
 __pycache__
-elm-stuff
-node_modules
 .mypy_cache
-# TODO: add `assets/*.{css,js}`
+*.pytest_cache
+*.coverage
+.ruff_cache
+
+# fastapi ignores
 assets/**/*.{js,css}
 templates/index.html
+
+# node/vite/js/elm
+node_modules
+elm-stuff
+dist
