@@ -1,11 +1,10 @@
 build: 
-	pnpm --prefix ./app/ run build 
+	pnpm --prefix app build 
 	mkdir -p assets 
 	mkdir -p templates
 	cp -r app/dist/assets/* assets/
 	cp app/dist/index.html templates/
-	cp app/dist/*.js assets/
-	cp app/dist/manifest.webmanifest assets/
+	rm -r app/dist
 
 format: 
 	pnpm --prefix ./app run format 
