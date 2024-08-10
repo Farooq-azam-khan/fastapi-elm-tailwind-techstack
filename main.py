@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-from api import api_router
+from api.user_routes import user_router
 
 load_dotenv()
 
@@ -27,7 +27,7 @@ app.add_middleware(
 app.mount("/assets", StaticFiles(directory="./assets"), name="asset_files")
 templates = Jinja2Templates(directory="templates")
 
-app.include_router(api_router)
+app.include_router(user_router)
 
 
 @app.get("/")
