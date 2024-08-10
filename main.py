@@ -30,6 +30,11 @@ templates = Jinja2Templates(directory="templates")
 app.include_router(user_router)
 
 
+@app.get("/api/version/latest")
+def api_latest_version():
+    return "v0.2"
+
+
 @app.get("/")
 def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
