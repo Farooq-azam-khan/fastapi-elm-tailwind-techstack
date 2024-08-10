@@ -9,7 +9,8 @@ __pycache__
 .ruff_cache
 
 # fastapi ignores
-assets/**/*.{js,css}
+assets/index-*.js
+assets/index-*.css
 templates/index.html
 
 # node/vite/js/elm
