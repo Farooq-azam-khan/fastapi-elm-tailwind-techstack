@@ -1,0 +1,24 @@
+# server ignores
+.env
+
+# python ignores
+__pycache__
+.mypy_cache
+*.pytest_cache
+*.coverage
+.ruff_cache
+
+# fastapi ignores
+assets/index-*.js
+assets/index-*.css
+templates/index.html
+
+# node/vite/js/elm
+node_modules
+elm-stuff
+dist
+/coverage
+
+
+# misc
+.DS_Store

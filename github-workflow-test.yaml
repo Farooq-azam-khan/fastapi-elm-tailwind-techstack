@@ -1,0 +1,49 @@
+name: Build and deploy Python app
+on:
+  push:
+    branches:
+      - prod
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python version
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.10"
+
+      - name: Create and start virtual environment
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Node dependencies
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18.16"
+
+      - name: Build App
+        run: |
+          cd app 
+          npm install
+          cd .. 
+          make build
+
+      # Optional: Add step to run tests here (PyTest, Django test suites, elm testing, etc.)
+
+      - name: Upload artifact for deployment jobs
+        uses: actions/upload-artifact@v2
+        with:
+          name: python-app
+          path: |
+            . 
+            !venv/
+            !app/
